@@ -32,7 +32,7 @@ public class CadastroCandidatoBean implements Serializable{
 		this.limpar();
 		
 	}
-	
+	 
 	public void limpar() {
 		this.candidato = new Candidato();
 	}
