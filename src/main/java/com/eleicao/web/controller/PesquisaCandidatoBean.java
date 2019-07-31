@@ -29,20 +29,19 @@ public class PesquisaCandidatoBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-	CandidatoDAO candidatoDAO;
+	private CandidatoDAO candidatoDAO;
 	
 	private Candidato candidatoSelecionado;
 	
 	private List<Candidato> candidatos = new ArrayList<>();
 	
-	@Inject
-	private EntityManager manager;
 	
-	@Inject
-	private FacesContext facesContext;
 	
-	@Inject
-	private HttpServletResponse response;
+//	@Inject
+//	private FacesContext facesContext;
+	
+//	@Inject
+//	private HttpServletResponse response;
 	
 	public List<Candidato> getCandidatos(){
 		return candidatos;		
@@ -72,22 +71,22 @@ public class PesquisaCandidatoBean implements Serializable{
 	}
 	
 	
-	public void emitit() {
-		Map<String,Object> parametros = new HashMap<>();
-		
-		ExecutorRelatorio executor = new ExecutorRelatorio("/relatorios/primeiro_relatorio.jasper",
-											this.response, parametros, "PrimeiroRelatorio.pdf");
-		
-		Session session = manager.unwrap(Session.class);
-		session.doWork(executor);
-		
-		if (executor.isRelatorioGerado()) {
-			facesContext.responseComplete();
-			
-		}else {
-			FacesUtil.addErrorMessage("A execução do relatorio não retornou dados");
-		}
-	}
+//	public void emitit() {
+//		Map<String,Object> parametros = new HashMap<>();
+//		
+//		ExecutorRelatorio executor = new ExecutorRelatorio("/relatorios/primeiro_relatorio.jasper",
+//											this.response, parametros, "PrimeiroRelatorio.pdf");
+//		
+//		//Session session = manager.unwrap(Session.class);
+//	//	session.doWork(executor);
+//		
+//		if (executor.isRelatorioGerado()) {
+//			//facesContext.responseComplete();
+//			
+//		}else {
+//			FacesUtil.addErrorMessage("A execução do relatorio não retornou dados");
+//		}
+//	}
 	
 	
 	

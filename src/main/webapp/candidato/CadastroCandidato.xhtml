@@ -65,7 +65,7 @@
 	    		<p:inputText id="fotoPolitico" size="60" maxlength="80" value="#{cadastroCandidatoBean.candidato.fotoPolitico}"/>
 	    		
 	    		<p:outputLabel value="Data Nascimento" for="dataNascimento"/>
-	    		<p:inputText id="dataNascimento" size="10" maxlength="10" value="#{cadastroCandidatoBean.candidato.dataNascimento}"/>
+	    		<p:calendar value="#{cadastroCandidatoBean.candidato.dataNascimento}" id="dataNascimento" size="20" pattern="dd/MM/yyyy" stepMinute="10"/>
 	    		
 	    		<h:outputLabel value="Foto" />
 	    		<p:fileUpload mode="advanced" label="Adicionar" auto="true" update="imagem" 
