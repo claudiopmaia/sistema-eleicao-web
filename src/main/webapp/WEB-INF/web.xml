@@ -3,7 +3,7 @@
   <display-name>eleicao-web</display-name>
   
 	<welcome-file-list>
-		<welcome-file>Index.jsf</welcome-file>
+		<welcome-file>Home.xhtml</welcome-file>
 	</welcome-file-list>
 	
 	<listener>
