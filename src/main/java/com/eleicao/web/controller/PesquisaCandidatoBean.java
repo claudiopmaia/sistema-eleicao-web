@@ -2,24 +2,16 @@ package com.eleicao.web.controller;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ViewScoped;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.servlet.http.HttpServletResponse;
-
-import org.hibernate.Session;
 
 import com.eleicao.web.dao.CandidatoDAO;
 import com.eleicao.web.modelo.Candidato;
 import com.eleicao.web.service.NegocioException;
-import com.eleicao.web.util.ExecutorRelatorio;
 import com.eleicao.web.util.jsf.FacesUtil;
 
 @Named
