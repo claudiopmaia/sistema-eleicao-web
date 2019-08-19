@@ -29,8 +29,8 @@ public class PesquisaCandidatoBean implements Serializable{
 	
 	
 	
-//	@Inject
-//	private FacesContext facesContext;
+	@Inject
+	private FacesContext facesContext;
 	
 //	@Inject
 //	private HttpServletResponse response;
